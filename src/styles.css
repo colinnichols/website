@@ -321,26 +321,17 @@ screen and (min-width: 40em) {
 }
 
 .photo-container {
-  margin-bottom: 1.25rem;
-}
-
-.photo-container.float-right {
-  margin-left: 1.875rem;
-}
-
-.photo-container a {
   display: inline-block;
   position: relative;
   background-color: #f9f9f9;
-  min-height: 201px;
   min-width: 268px;
 }
 
-.photo-container a:before {
+.photo-container:before {
   position: absolute;
   z-index: 0;
   width: 100%;
-  content: "loading image from flickr";
+  content: "loading image...";
   text-align: center;
   top: 50%;
   margin-top: -17px;
@@ -351,7 +342,7 @@ screen and (min-width: 40em) {
   text-shadow: 0px -1px 0px #fff;
 }
 
-.photo-container a:after {
+.photo-container:after {
   content: " ";
   position: absolute;
   width: 100%;
@@ -361,12 +352,12 @@ screen and (min-width: 40em) {
   top: 0;
 }
 
-.photo-container a img {
+.photo-container img {
   position: relative;
   z-index: 1;
 }
 
-.photo-container a .flickr-link {
+.photo-container .flickr-link {
   -webkit-transition: opacity .6s ease-out;
   transition: opacity .6s ease-out;
   position: absolute;
@@ -379,19 +370,19 @@ screen and (min-width: 40em) {
   visibility: hidden;
 }
 
-.photo-container a .flickr-link .fa {
+.photo-container .flickr-link .fa {
   margin-left: 2px;
   position: relative;
   top: -2px;
 }
 
-.photo-container a:hover:after,
-.photo-container a:focus:after {
+.photo-container:hover:after,
+.photo-container:focus:after {
   box-shadow: inset 0 0 0 .0625rem rgba(74, 158, 218, 0.5), 0 0 .3125rem .125rem rgba(74, 158, 218, 0.5);
 }
 
-.photo-container a:hover .flickr-link,
-.photo-container a:focus .flickr-link {
+.photo-container:hover .flickr-link,
+.photo-container:focus .flickr-link {
   opacity: 1;
   visibility: visible;
 }
