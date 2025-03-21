@@ -78,6 +78,11 @@ h6 {
   margin-bottom: .5rem;
 }
 
+.h1,
+h1 {
+  font-size: 1.8rem;
+}
+
 .h2,
 h2 {
   font-size: 1.5rem;
@@ -95,6 +100,10 @@ h4 {
 
 @media print,
 screen and (min-width: 40em) {
+  .h1,
+  h1 {
+    font-size: 3rem;
+  }
 
   .h2,
   h2 {
@@ -387,17 +396,7 @@ screen and (min-width: 40em) {
   visibility: visible;
 }
 
-.page-title {
-  font-size: 1.8rem;
-  line-height: 1.1;
-}
-
 .resume-header {
-  position: relative;
-}
-
-.resume-header .page-title {
-  display: block;
   position: relative;
 }
 
@@ -469,7 +468,7 @@ screen and (min-width: 40em) {
 }
 
 .contact .contact-name {
-  padding: 0;
+  margin-bottom: 7px;
 }
 
 .contact .contact-icon {
@@ -498,7 +497,7 @@ screen and (min-width: 40em) {
 }
 
 @media screen and (min-width: 32em) {
-  .resume-header .page-title:after {
+  .resume-header h1:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -521,10 +520,6 @@ screen and (min-width: 40em) {
 }
 
 @media screen and (min-width: 40em) {
-  .page-title {
-    font-size: 3rem;
-  }
-
   .resume-section .resume-section-decoration {
     bottom: 1.25rem;
   }

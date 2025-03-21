@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <div className="flex flex-col md:block">
-        <h1 className="page-title">About</h1>
+        <h1>About</h1>
         <PhotoContainer />
         <p>
           Welcome to my site, my name is Colin Nichols. I am a Engineering

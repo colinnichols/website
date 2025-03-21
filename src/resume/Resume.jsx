@@ -5,7 +5,7 @@ import WorkHistory from "./WorkHistory";
 const Resume = () => {
   return (
     <>
-      <header className="page-header resume-header">
+      <header className="page-header resume-header mb-5">
         <span
           className="placeholder-contact-information"
           aria-hidden="true"
