@@ -333,6 +333,7 @@ screen and (min-width: 40em) {
   display: inline-block;
   position: relative;
   background-color: #f9f9f9;
+  min-height: 201px;
   min-width: 268px;
 }
 
