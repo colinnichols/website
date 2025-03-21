@@ -7,10 +7,14 @@ const About = () => {
         aria-hidden="true"
       >
         <a href="https://www.flickr.com/photos/colinnichols/6662613221">
-          <img
-            src="/img/steamboat-springs.jpg"
-            alt="photo I took near Steamboat Springs, Colorado"
-          />
+          <picture>
+            <source srcSet="/img/steamboat-springs.avif" />
+            <source srcSet="/img/steamboat-springs.webp" />
+            <img
+              src="/img/steamboat-springs.jpg"
+              alt="photo I took near Steamboat Springs, Colorado"
+            />
+          </picture>
           <span className="flickr-link">
             view on Flickr{" "}
             <img className="fa" src="/img/flickr.svg" aria-hidden="true" />
@@ -34,10 +38,14 @@ const About = () => {
       </p>
       <div className="flickr-photo photo-container md:hidden">
         <a href="https://www.flickr.com/photos/colinnichols/6662613221">
-          <img
-            src="/img/steamboat-springs.jpg"
-            alt="photo I took near Steamboat Springs, Colorado"
-          />
+          <picture>
+            <source srcSet="/img/steamboat-springs.avif" />
+            <source srcSet="/img/steamboat-springs.webp" />
+            <img
+              src="/img/steamboat-springs.jpg"
+              alt="photo I took near Steamboat Springs, Colorado"
+            />
+          </picture>
           <span className="flickr-link">
             view on Flickr{" "}
             <img className="fa" src="/img/flickr.svg" aria-hidden="true" />
