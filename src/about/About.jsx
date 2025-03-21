@@ -1,4 +1,4 @@
-const AboutContent = () => {
+const About = () => {
   return (
     <>
       <h1>About</h1>
@@ -48,4 +48,4 @@ const AboutContent = () => {
   );
 };
 
-export default AboutContent;
+export default About;
