@@ -13,7 +13,6 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
@@ -27,12 +26,6 @@ const ResumeLazyRoute = ResumeLazyImport.update({
   path: '/resume',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/resume.lazy').then((d) => d.Route))
-
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -51,13 +44,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
-      parentRoute: typeof rootRoute
-    }
     '/resume': {
       id: '/resume'
       path: '/resume'
@@ -72,41 +58,36 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/resume': typeof ResumeLazyRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/resume': typeof ResumeLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/resume': typeof ResumeLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/resume'
+  fullPaths: '/' | '/resume'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/resume'
-  id: '__root__' | '/' | '/about' | '/resume'
+  to: '/' | '/resume'
+  id: '__root__' | '/' | '/resume'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   ResumeLazyRoute: typeof ResumeLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   ResumeLazyRoute: ResumeLazyRoute,
 }
 
@@ -121,15 +102,11 @@ export const routeTree = rootRoute
       "filePath": "__root.jsx",
       "children": [
         "/",
-        "/about",
         "/resume"
       ]
     },
     "/": {
       "filePath": "index.jsx"
-    },
-    "/about": {
-      "filePath": "about.jsx"
     },
     "/resume": {
       "filePath": "resume.lazy.jsx"
