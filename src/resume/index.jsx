@@ -1,6 +1,7 @@
 import Education from "./Education";
 import FreelanceProjects from "./FreelanceProjects";
 import WorkHistory from "./WorkHistory";
+import "./styles.css";
 
 const Resume = () => {
   return (

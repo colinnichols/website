@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const PhotoContainer = () => {
   return (
     <a

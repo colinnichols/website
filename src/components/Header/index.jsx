@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import "./styles.css";
 
 export default function Header() {
   return (

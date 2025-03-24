@@ -1,0 +1,125 @@
+.resume-header {
+  position: relative;
+
+  .placeholder-contact-information {
+    display: none;
+  }
+
+  .contact {
+    border: .0625rem solid #dbdcdc;
+    padding: .625rem;
+    background-color: #fff;
+    margin-bottom: .625rem;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    .contact-name {
+      margin-bottom: 7px;
+    }
+
+    .contact-icon {
+      position: relative;
+      top: -1px;
+      margin-right: 7px;
+    }
+
+    .contact-detail {
+      font-weight: 300;
+      line-height: 1.2;
+    }
+  }
+
+  @media screen and (min-width: 32em) {
+    h1:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #dbdcdc;
+      left: 0;
+      bottom: -4px;
+    }
+
+    .placeholder-contact-information {
+      display: block;
+      float: right;
+      min-height: 115px;
+      width: 230px;
+    }
+
+    .contact {
+      position: absolute;
+    }
+  }
+}
+
+.resume-section {
+  margin-top: 5rem;
+  position: relative;
+
+  .resume-section-title {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding-right: .25rem;
+    padding-left: .125rem;
+  }
+
+  .resume-section-decoration {
+    background-color: #22c097;
+    border-radius: .125rem;
+    display: block;
+    height: .375rem;
+    position: absolute;
+    left: -.375rem;
+    right: -.375rem;
+    bottom: .875rem;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 40em) {
+    .resume-section-decoration {
+        bottom: 1.25rem;
+      }
+  }
+}
+
+.resume-entry {
+  margin-top: 3.75rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .resume-entry-title {
+    background-color: #e8f5ff;
+    box-shadow: .375rem 0 0 0 #e8f5ff, -.375rem 0 0 0 #e8f5ff;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  .resume-entry-org:before {
+    content: "-";
+    display: inline-block;
+    margin: 0 5px;
+    color: #4a4a4a;
+  }
+
+  .date-range {
+    padding-top: .5rem;
+    float: right;
+    font-family: "fairplex-wide";
+  }
+
+  @media screen and (min-width: 40em) {
+    .resume-entry-title {
+      padding: 0;
+    }
+
+    .date-range {
+      font-size: 1.5625rem;
+      padding-top: .3125rem;
+    }
+  }
+}
