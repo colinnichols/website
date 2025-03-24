@@ -20,7 +20,7 @@ export default function Header() {
             <span className="sr-only">Menu Toggle</span>
             <img
               className="fa"
-              src="/img/bars.svg"
+              src="/images/bars.svg"
               title="Menu Toggle"
               aria-hidden="true"
             />

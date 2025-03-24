@@ -15,7 +15,7 @@ const Resume = () => {
           <h2 className="h4 contact-name">Colin Nichols</h2>
           <img
             className="fa contact-icon"
-            src="/img/envelope.svg"
+            src="/images/envelope.svg"
             aria-hidden="true"
           />
           <a className="contact-detail" href="mailto:me@colinnichols.com">

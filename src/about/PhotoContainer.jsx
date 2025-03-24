@@ -9,14 +9,19 @@ const PhotoContainer = () => {
           media="(min-width:768px)"
           srcset="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=268"
         ></source>
+        <source
+          media="(min-width:500px)"
+          srcset="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=703"
+        ></source>
         <img
-          src="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=703"
+          fetchPriority="high"
+          src="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=436"
           alt="photo I took near Steamboat Springs, Colorado"
         />
       </picture>
       <span className="flickr-link">
         view on Flickr{" "}
-        <img className="fa" src="/img/flickr.svg" aria-hidden="true" />
+        <img className="fa" src="/images/flickr.svg" aria-hidden="true" />
       </span>
     </a>
   );
