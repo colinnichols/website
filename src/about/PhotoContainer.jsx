@@ -5,10 +5,12 @@ const PhotoContainer = () => {
       href="https://www.flickr.com/photos/colinnichols/6662613221"
     >
       <picture>
-        <source srcSet="/img/steamboat-springs.avif" />
-        <source srcSet="/img/steamboat-springs.webp" />
+        <source
+          media="(min-width:768px)"
+          srcset="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=268"
+        ></source>
         <img
-          src="/img/steamboat-springs.jpg"
+          src="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=703"
           alt="photo I took near Steamboat Springs, Colorado"
         />
       </picture>
