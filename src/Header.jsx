@@ -14,7 +14,6 @@ export default function Header() {
             type="checkbox"
             id="navigation-state"
             className="navigation-state"
-            onChange=""
           />
           <label htmlFor="navigation-state" className="navigation-trigger">
             <span className="sr-only">Menu Toggle</span>

@@ -7,14 +7,14 @@ const PhotoContainer = () => {
       <picture>
         <source
           media="(min-width:768px)"
-          srcset="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=268"
+          srcSet="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=268"
         ></source>
         <source
           media="(min-width:500px)"
-          srcset="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=703"
+          srcSet="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=703"
         ></source>
         <img
-          fetchPriority="high"
+          fetchpriority="high"
           src="https://colinnichols.imgix.net/steamboat-springs.jpg?auto=format&w=436"
           alt="photo I took near Steamboat Springs, Colorado"
         />
