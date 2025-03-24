@@ -136,6 +136,7 @@
       max-width: none;
       overflow: visible;
       display: flex;
+      border-bottom: 0 !important;
     }
 
     a {

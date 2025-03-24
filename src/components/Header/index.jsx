@@ -2,6 +2,10 @@ import { Link } from "@tanstack/react-router";
 import "./styles.css";
 
 export default function Header() {
+  const closeNavigation = () => {
+    document.getElementById("navigation-state").checked = false;
+  };
+
   return (
     <header className="header">
       <div className="flex mx-auto px-[2rem] max-w-5xl">
@@ -26,8 +30,12 @@ export default function Header() {
             />
           </label>
           <div className="navigation-menu">
-            <Link to="/">About</Link>
-            <Link to="/resume">Resume</Link>
+            <Link to="/" onClick={closeNavigation}>
+              About
+            </Link>
+            <Link to="/resume" onClick={closeNavigation}>
+              Resume
+            </Link>
           </div>
         </nav>
       </div>
