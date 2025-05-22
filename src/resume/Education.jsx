@@ -1,7 +1,9 @@
 const Education = () => {
   return (
     <section>
-      <h2>Education</h2>
+      <h2 className="section-header">
+        <span className="section-header-title">Education</span>
+      </h2>
       <ul>
         <li>Interactive Information Technology, U. of Hartford, CT</li>
         <li>

@@ -1,11 +1,13 @@
 const FreelanceProjects = () => {
   return (
     <section>
-      <h2>Freelance Projects</h2>
+      <h2 className="section-header">
+        <span className="section-header-title">Freelance Projects</span>
+      </h2>
       <ul>
         <li>
           <a href="http://devtechsys.com/">devtechsys.com</a> - designed and
-          developed front-end using Siteleaf static site builder from PSD
+          developed frontend using Siteleaf static site builder from PSD
         </li>
         <li>
           <a href="https://selfreliance.usaid.gov/">selfreliance.usaid.gov</a> -
@@ -15,7 +17,7 @@ const FreelanceProjects = () => {
         </li>
         <li>
           <a href="https://aidscape.usaid.gov/">aidscape.usaid.gov</a> -
-          designed and developed front-end for Aidscape data portals including{" "}
+          designed and developed frontend for Aidscape data portals including{" "}
           <a href="https://explorer.usaid.gov/">explorer.usaid.gov</a>,
           <a href="https://idea.usaid.gov/">idea.usaid.gov</a>,{" "}
           <a href="https://mrr.usaid.gov/">mrr.usaid.gov</a>,{" "}

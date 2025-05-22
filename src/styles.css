@@ -26,6 +26,10 @@ body {
     margin-bottom: 1rem;
   }
 
+  strong {
+    font-weight: 600;
+  }
+
   a {
     color: #166dce;
   }

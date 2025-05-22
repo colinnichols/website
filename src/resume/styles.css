@@ -55,20 +55,21 @@
   }
 }
 
-.resume-section {
+.section-header {
   margin-top: 5rem;
   position: relative;
 
-  .resume-section-title {
+  .section-header-title {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.98);
     padding-right: .25rem;
     padding-left: .125rem;
   }
 
-  .resume-section-decoration {
+  .section-header-title:after {
     background-color: #22c097;
     border-radius: .125rem;
+    content: "";
     display: block;
     height: .375rem;
     position: absolute;
@@ -79,7 +80,7 @@
   }
 
   @media screen and (min-width: 40em) {
-    .resume-section-decoration {
+    .section-header-title:after {
         bottom: 1.25rem;
       }
   }

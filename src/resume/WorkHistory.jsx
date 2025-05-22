@@ -1,109 +1,62 @@
 const WorkHistory = () => {
   return (
     <section>
-      <h2 className="resume-section">
-        <span className="resume-section-title">Work History</span>
-        <span className="resume-section-decoration" aria-hidden="true"></span>
+      <h2 className="section-header">
+        <span className="section-header-title">Work History</span>
       </h2>
       <div className="resume-entries">
         <div className="resume-entry">
           <span className="h3 date-range">06/21 - 10/24</span>
           <h3 className="resume-entry-title">Gartner, Denver, CO</h3>
           <h4 className="clear-right">
-            Engineering Manager{" "}
-            <span className="resume-entry-org">April 2024 - October 2024</span>
+            Engineering Manager / Lead / Sr Software Engineer II
           </h4>
           <ul>
             <li>
-              Managed international team of six engineers, three front-end and
-              three back-end. Met with the team regularly for 1:1s, daily scrum
-              activities, ad-hoc collaboration. Provided guidance through goal
-              development, career coaching, feedback and reviews.
+              Managed a global team of six full-time engineers and two
+              international contractors, including backend, frontend, and hybrid
+              roles.
             </li>
             <li>
-              Managed multiple projects including email acquisition, lead
-              acquisition, chat service and APIs/topics. Communicated regularly
-              with other product and engineering teams to help integrate our
-              projects, collaborated with analytics and marketing teams to
-              optimize data.
+              Owned team processes including 1:1s, daily standups, goal setting,
+              performance reviews, and engineering OKRs. Partnered with Product
+              to align on quarterly priorities.
             </li>
             <li>
-              Led CCPA cookie compliance implementation and developed POC used
-              across Gartner by four other domains saving weeks of duplicated
-              engineering efforts. Worked closely with legal and analytics teams
-              to ensure we were compliant while still collecting data.
+              Built a multi-branded lead acquisition service using Next.js and
+              Tailwind in under 3 months, driving over $100M in leads across
+              three domains. Initially deployed to AWS, later migrated to
+              Vercel. Integrated with Kafka, LaunchDarkly, GA4, Contentful,
+              FullStory, Snyk, and PagerDuty.
             </li>
             <li>
-              Communicated project successes and challenges to leadership on a
-              weekly basis
-            </li>
-          </ul>
-          <h4>
-            Engineering Lead <span>April 2023 - March 2024</span>
-          </h4>
-          <ul>
-            <li>
-              Led a team of three full-time FE engineers to develop a
-              multi-branded lead acquisition service to generate leads.
-              Collaborated with Product, Engineering, Design and other
-              stakeholders to deliver in 3 months and generating over 2 million
-              in new revenue in the first 6 months of operation. Built with
-              Next.js, Vercel and multi-branded design system. Integrated the
-              service with LaunchDarkly, GA4 and Datadog.
+              Developed a high-performing email acquisition service in Preact
+              using a custom multi-brand design system. Deployed to AWS edge
+              locations, integrated with Eloqua and a custom A/B testing
+              framework managed via Contentful.
             </li>
             <li>
-              Managed three engineers based across the US, and two contractors
-              based internationally. Met with the team regularly during 1:1s and
-              ad-hoc to collaborate. Provided guidance through goal development,
-              career coaching, feedback and reviews.
+              Implemented CCPA and GDPR cookie compliance solutions across
+              Gartner domains using OneTrust, collaborating with legal and
+              analytics teams to maintain compliance while optimizing data
+              collection.
             </li>
             <li>
-              Managed scrum ceremonies with Product counterparts by creating
-              Jira tickets and prioritizing work
+              Contributed to the Capterra.com design system, leading the
+              transition to support multi-brand theming and allowing consistent
+              UX across several microservices. Collaborated with designers
+              across 3 different brands using Figma and communicated component
+              design with engineers and other stakeholders using Storybook.
             </li>
             <li>
-              Built many strong relationships and connected people across the
-              organization. Focused on product initiatives and helped the team
-              understand the solutions we were creating. Allied with product
-              manager to strategize team priorities, new features and long term
-              initiatives.
-            </li>
-          </ul>
-          <h4>
-            Sr Software Engineer II <span>June 2021 - March 2023</span>
-          </h4>
-          <ul>
-            <li>
-              Led a team of two contractors to create multi-branded email
-              acquisition service that generated millions of new subscribers.
-              Worked closely with Marketing, Product, Engineering and Design
-              teams to ensure a single solution could be used across multiple
-              sites. Used customized preact, server less architecture integrated
-              with Contentful and Eloqua. Built custom A/B testing solution that
-              could be managed in Contentful by Marketing teams to test
-              variations and promote a winner.
+              Built React components using GraphQL and Tailwind for Capterra
+              product and category pages. Improved GTM and CWV performance in
+              partnership with analytics engineers and AdSwerve.
             </li>
             <li>
-              Contributed with other lead engineers on design system for
-              capterra.com. Helped transition design systems' theme-ability
-              allowing it to support multiple brands across Gartner. This
-              allowed the design system to be used in several multi branded
-              micro services saving countless effort supporting up to four
-              themes
-            </li>
-            <li>
-              Developed front-end components on capterra.com product and
-              category pages
-            </li>
-            <li>
-              Implemented GDPR cookie compliance solution for capterra.com while
-              collaborating with legal teams and others tasked with this across
-              Gartner
-            </li>
-            <li>
-              Consulted with analytics engineer to improve Google Tag Manager by
-              reducing strain on CWV and improving load time for desktop and
-              mobile experiences
+              Promoted two direct reports and advocated for engineers' growth
+              and visibility. Communicated key progress and challenges to
+              leadership weekly.
             </li>
           </ul>
         </div>
@@ -120,7 +73,7 @@ const WorkHistory = () => {
               Frontend development with a specialty in HTML/SCSS and UI/UX
               <ul>
                 <li>
-                  developed consistent front-end frameworks using Storybook,
+                  developed consistent frontend frameworks using Storybook,
                   React, D3, React Testing Library, Sass, Foundation Grid,
                   FontAwesome, GoogleFonts and more
                 </li>
@@ -169,7 +122,7 @@ const WorkHistory = () => {
           <span className="h3 date-range">06/12 - 02/15</span>
           <h3 className="resume-entry-title">Verizon, Denver, CO</h3>
           <h4 className="clear-right">
-            GUI Designer{" "}
+            System Consultant Software Engineer{" "}
             <span className="resume-entry-org">Verizon Business</span>
           </h4>
           <ul>
@@ -178,7 +131,7 @@ const WorkHistory = () => {
               ambassador for our team
             </li>
             <li>
-              front-end development including wire frames, photoshop design,
+              frontend development including wire frames, photoshop design,
               image optimization, and hand-coding HTML / CSS
             </li>
             <li>
@@ -200,12 +153,12 @@ const WorkHistory = () => {
           <span className="h3 date-range">07/09 - 06/12</span>
           <h3 className="resume-entry-title">Insight Global, McLean, VA</h3>
           <h4 className="clear-right">
-            Contracted GUI Designer{" "}
+            Contracted UX Engineer{" "}
             <span className="resume-entry-org">Verizon Business</span>
           </h4>
           <ul>
             <li>
-              front-end development including wire frames, photoshop design,
+              frontend development including wire frames, photoshop design,
               image optimization, and hand-coding HTML / CSS
             </li>
             <li>
@@ -234,7 +187,7 @@ const WorkHistory = () => {
           </h4>
           <ul>
             <li>
-              front-end development including wire frames, photoshop design,
+              frontend development including wire frames, photoshop design,
               slicing images, and hand-coding HTML / CSS
             </li>
             <li>
