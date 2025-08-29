@@ -17,15 +17,29 @@ import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
 
+const SandboxLazyImport = createFileRoute('/sandbox')()
 const ResumeLazyImport = createFileRoute('/resume')()
+const FormLazyImport = createFileRoute('/form')()
 
 // Create/Update Routes
+
+const SandboxLazyRoute = SandboxLazyImport.update({
+  id: '/sandbox',
+  path: '/sandbox',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/sandbox.lazy').then((d) => d.Route))
 
 const ResumeLazyRoute = ResumeLazyImport.update({
   id: '/resume',
   path: '/resume',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/resume.lazy').then((d) => d.Route))
+
+const FormLazyRoute = FormLazyImport.update({
+  id: '/form',
+  path: '/form',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/form.lazy').then((d) => d.Route))
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -44,11 +58,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/form': {
+      id: '/form'
+      path: '/form'
+      fullPath: '/form'
+      preLoaderRoute: typeof FormLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/resume': {
       id: '/resume'
       path: '/resume'
       fullPath: '/resume'
       preLoaderRoute: typeof ResumeLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/sandbox': {
+      id: '/sandbox'
+      path: '/sandbox'
+      fullPath: '/sandbox'
+      preLoaderRoute: typeof SandboxLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -58,37 +86,47 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/form': typeof FormLazyRoute
   '/resume': typeof ResumeLazyRoute
+  '/sandbox': typeof SandboxLazyRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/form': typeof FormLazyRoute
   '/resume': typeof ResumeLazyRoute
+  '/sandbox': typeof SandboxLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/form': typeof FormLazyRoute
   '/resume': typeof ResumeLazyRoute
+  '/sandbox': typeof SandboxLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/resume'
+  fullPaths: '/' | '/form' | '/resume' | '/sandbox'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/resume'
-  id: '__root__' | '/' | '/resume'
+  to: '/' | '/form' | '/resume' | '/sandbox'
+  id: '__root__' | '/' | '/form' | '/resume' | '/sandbox'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FormLazyRoute: typeof FormLazyRoute
   ResumeLazyRoute: typeof ResumeLazyRoute
+  SandboxLazyRoute: typeof SandboxLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FormLazyRoute: FormLazyRoute,
   ResumeLazyRoute: ResumeLazyRoute,
+  SandboxLazyRoute: SandboxLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -102,14 +140,22 @@ export const routeTree = rootRoute
       "filePath": "__root.jsx",
       "children": [
         "/",
-        "/resume"
+        "/form",
+        "/resume",
+        "/sandbox"
       ]
     },
     "/": {
       "filePath": "index.jsx"
     },
+    "/form": {
+      "filePath": "form.lazy.jsx"
+    },
     "/resume": {
       "filePath": "resume.lazy.jsx"
+    },
+    "/sandbox": {
+      "filePath": "sandbox.lazy.jsx"
     }
   }
 }
